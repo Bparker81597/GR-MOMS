@@ -17,6 +17,7 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 font-medium text-charcoal">
           <Link href="/" className="hover:text-plum-accent transition-colors">Home</Link>
+          <Link href="/about" className="hover:text-plum-accent transition-colors">About</Link>
           <Link href="/blog" className="hover:text-plum-accent transition-colors">Blog</Link>
           <Link href="/community" className="hover:text-plum-accent transition-colors">Community</Link>
           <Link href="/resources" className="hover:text-plum-accent transition-colors">Resources</Link>

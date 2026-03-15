@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="container mx-auto px-4 mt-12 pt-8 border-t border-light-gray-border text-center text-xs text-charcoal/50">
-        © {new Date().getFullYear()} GR Moms. All rights reserved. Made with ♡ in Grand Rapids.
+        © 2026 GR Moms. All rights reserved. Made with ♡ in Grand Rapids.
       </div>
     </footer>
   );

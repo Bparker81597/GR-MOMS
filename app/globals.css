@@ -48,14 +48,46 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
 }
 
+/* Base button and card styles as standard CSS since v4 @apply can be picky with certain utilities */
 .btn-primary {
-  @apply bg-plum-accent text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all shadow-sm;
+  background-color: var(--color-plum-accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
 }
 
 .btn-secondary {
-  @apply bg-white border border-plum-accent text-plum-accent px-6 py-3 rounded-full font-medium hover:bg-plum-accent hover:text-white transition-all shadow-sm;
+  background-color: white;
+  border: 1px solid var(--color-plum-accent);
+  color: var(--color-plum-accent);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-plum-accent);
+  color: white;
 }
 
 .card {
-  @apply bg-white rounded-2xl shadow-sm border border-light-gray-border overflow-hidden hover:shadow-md transition-shadow duration-300;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-light-gray-border);
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }

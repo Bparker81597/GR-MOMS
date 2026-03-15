@@ -120,7 +120,7 @@ export default function Home() {
                  Need support, but want privacy?
                </h2>
                <p className="text-lg text-charcoal/80 mb-8 leading-relaxed">
-                 Share a question, a win, a worry, or a local ask anonymously. Every post is moderated to help protect this community. It's a safer way to get the village support you need.
+                 Share a question, a win, a worry, or a local ask anonymously. Every post is moderated to help protect this community. It&apos;s a safer way to get the village support you need.
                </p>
                <div className="flex flex-col sm:flex-row gap-4">
                  <Link href="/community/anonymous" className="bg-plum-accent text-white px-8 py-4 rounded-full font-medium hover:bg-opacity-90 transition-all shadow-lg text-center">
@@ -145,7 +145,7 @@ export default function Home() {
                    <span className="text-xs text-charcoal/40">2h ago</span>
                  </div>
                  <h4 className="font-serif text-lg mb-2">Feeling overwhelmed with two under two...</h4>
-                 <p className="text-charcoal/70 text-sm mb-4">Any advice on how to manage the bedtime routine alone? My partner works late and I'm struggling.</p>
+                 <p className="text-charcoal/70 text-sm mb-4">Any advice on how to manage the bedtime routine alone? My partner works late and I&apos;m struggling.</p>
                  <div className="flex gap-2">
                    <span className="px-3 py-1 bg-sage-green/10 text-sage-green rounded-full text-xs font-medium">12 Helpful</span>
                    <span className="px-3 py-1 bg-blush-pink/20 text-plum-accent rounded-full text-xs font-medium">8 Hugs</span>
@@ -218,6 +218,46 @@ export default function Home() {
                ))}
              </div>
            </div>
+        </section>
+
+        {/* COMMUNITY VOICES - REAL REVIEWS */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-serif text-charcoal mb-4">Community Voices</h2>
+              <p className="text-charcoal/60">Real stories from Grand Rapids moms.</p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  name: "Melissa H.",
+                  quote: "The Facebook group is loaded with information and I interact online with many moms daily... It’s been an amazing experience to share our joys, struggles, and advice.",
+                },
+                {
+                  name: "Jessica B.",
+                  quote: "There have been many times my fellow Moms of Multiples have been the experts, the therapy, the relatability, and the friendship that I've needed.",
+                },
+                {
+                  name: "Katie",
+                  quote: "As a stay-at-home mom, Moms of Grand Rapids has helped me stay connected with the changing world... The women are very informed about a bazillion things.",
+                }
+              ].map((review, i) => (
+                <div key={i} className="bg-warm-cream/30 p-8 rounded-2xl border border-light-gray-border italic relative">
+                   <span className="absolute top-4 right-6 text-4xl text-plum-accent/10 not-italic">&quot;</span>
+                   <p className="text-charcoal/80 mb-6 leading-relaxed relative z-10">
+                     {review.quote}
+                   </p>
+                   <div className="flex items-center gap-3 not-italic">
+                     <div className="w-8 h-8 bg-plum-accent text-white rounded-full flex items-center justify-center text-xs font-bold">
+                       {review.name[0]}
+                     </div>
+                     <span className="font-bold text-charcoal text-sm">{review.name}</span>
+                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
         {/* NEWSLETTER CTA */}
