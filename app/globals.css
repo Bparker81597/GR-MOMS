@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFF9F4; /* Warm Cream */
+  --foreground: #2F2A2E; /* Charcoal Text */
+  --font-serif: var(--font-dm-serif);
+  --font-sans: var(--font-inter);
+  
+  /* Brand Colors */
+  --color-blush-pink: #F7D6E7;
+  --color-dusty-rose: #D98FB3;
+  --color-lavender: #CDB4F6;
+  --color-warm-cream: #FFF9F4;
+  --color-sage-green: #C9D9C3;
+  --color-plum-accent: #7B4B6A;
+  --color-soft-mauve: #B993B6;
+  --color-charcoal: #2F2A2E;
+  --color-light-gray-border: #E9E2E7;
+  --color-white: #FFFFFF;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  
+  --color-blush-pink: var(--color-blush-pink);
+  --color-dusty-rose: var(--color-dusty-rose);
+  --color-lavender: var(--color-lavender);
+  --color-warm-cream: var(--color-warm-cream);
+  --color-sage-green: var(--color-sage-green);
+  --color-plum-accent: var(--color-plum-accent);
+  --color-soft-mauve: var(--color-soft-mauve);
+  --color-charcoal: var(--color-charcoal);
+  --color-light-gray-border: var(--color-light-gray-border);
+  --color-white: var(--color-white);
+  
+  --spacing-128: 32rem;
+  --spacing-144: 36rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+.btn-primary {
+  @apply bg-plum-accent text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all shadow-sm;
+}
+
+.btn-secondary {
+  @apply bg-white border border-plum-accent text-plum-accent px-6 py-3 rounded-full font-medium hover:bg-plum-accent hover:text-white transition-all shadow-sm;
+}
+
+.card {
+  @apply bg-white rounded-2xl shadow-sm border border-light-gray-border overflow-hidden hover:shadow-md transition-shadow duration-300;
 }
